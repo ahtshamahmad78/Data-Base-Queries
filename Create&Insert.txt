@@ -1,0 +1,48 @@
+
+
+insert into Department values('Math',120),('IT',130),('English',140),('Science',150),('Physics',160),('Mechanical ',170),
+('Food Sciences ',180),
+('Philosophy',190),('IBA',200),('Chemical Engineering',210),('Electrical Engineering',220),('Islamic Studies',230);
+
+select *from department
+Truncate table Employee
+select *from Employee
+
+insert into Employee values ('Sarfraz', 'Khan','sarfrazkhan@gmail.com','03244330555','20221229','Math_0001', 20000 ,NULL,1),
+ ('Ali', 'Hassan','Ali@gmail.com','03242330555','20221229','IT_0002', 30000 ,NULL,2),
+('Umer', 'Khan','Umer@gmail.com','03454330555','20221229','English_0003', 40000 ,NULL,3),
+('Waqas', 'Malik','Waqas@gmail.com','03344330555','20221229','Science_0004', 50000 ,NULL,4),
+('Irfan', 'Ahmad','Irfan@gmail.com','03444330555','20221229','Physics_0005', 20000 ,NULL,5),
+('Atif', 'Shakeel','Atif@gmail.com','03544330555','20221229','Mechanical_0006', 20000 ,NULL,6),
+('Sami', 'Ullah','Sami@gmail.com','03144330555','20221229','FS_0007', 80000 ,NULL,7),
+('Adnan', 'Bashir','Adnan@gmail.com','03344330555','20221229','Philosophy_0008', 20000 ,NULL,8),
+('Waseem', 'Saleem','Waseem@gmail.com','03144330555','20221229','IBA_0009', 90000 ,NULL,9),
+('Palwasa', 'Umer','Palwasa@gmail.com','03276330555','20221229','CE_00010', 20000 ,NULL,10),
+('Danial', 'Saleem','Danial@gmail.com','03344330555','20221229','EE_00011', 60000 ,NULL,11),
+('Sheeraz', 'Kaleem','Sheeraz@gmail.com','034744330555','20221229','IS_00012', 20000 ,NULL,12),
+('Tanveer', 'Ahmed','Tanveer@gmail.com','03184330555','20221229','IT_00013', 30000 ,NULL,2),
+('PirMohammed', 'Khan','PirMohammed@gmail.com','03324330555','20221229','English_00014', 20000 ,NULL,3),
+('Shaheen', 'Afridi','Shaheen@gmail.com','03044330555','20221229','IBA_00015', 50000 ,NULL,9),
+('Sohail', 'Tanveer','Sohail@gmail.com','03054330555','20221229','Philosophy_00016', 20000 ,NULL,8),
+('Parizad', 'Malik','Parizad@gmail.com','03094330555','20221229','Physics_00017', 40000 ,NULL,5),
+('Inayat', 'Malik','Inayat@gmail.com','03084330555','20221229','EE_00018', 60000 ,NULL,11),
+('Danish', 'Taimoor','Danish@gmail.com','03024330555','20221229','Mechanical_00019', 20000 ,NULL,6),
+('Salman', 'Khan','Salman@gmail.com','03054530555','20221229','IT_00020', 70000 ,NULL,2),
+('Amir', 'Khan','Amir@gmail.com','03130930555','20221229','CE_00021', 20000 ,NULL,10),
+('Saif', 'Ali','Saif@gmail.com','03244330555','20221229','EE_00022', 80000 ,NULL,11),
+('Shahrukh', 'Khan','Shahrukh@gmail.com','03424450555','20221229','IT_00023', 20000 ,NULL,2),
+('Jaleel', 'Ahmed','Jaleel@gmail.com','030447390555','20221229','IT_00024', 90000 ,NULL,2),
+('Parveez', 'Khan','Parveez@gmail.com','03071234555','20221229','Math_00025', 20000 ,NULL,1);
+
+CREATE TABLE Employee (  
+employee_id  int PRIMARY KEY IDENTITY (1, 1),
+first_name varchar(250),
+last_name varchar(250),
+email varchar(250),
+phone_number varchar(250),
+hire_date date,
+job_id varchar(250) ,
+salary  int,
+manager_id  int,
+department_id int FOREIGN KEY (department_id) REFERENCES department(department_id)
+ );
